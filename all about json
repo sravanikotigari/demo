@@ -1,0 +1,68 @@
+
+creating:
+
+let key = 'Item 1';
+localStorage.setItem(key, 'Value');
+
+Reading:
+
+let myItem = localStorage.getItem(key);
+
+
+updating :
+
+
+localStorage.setItem(key, 'New Value');
+
+deleting:
+
+localStorage.removeItem(key);
+
+
+clear everything in local storage:
+
+localStorage.clear();
+
+
+
+storing json objects:
+
+
+// Create item:
+let myObj = { name: 'Skip', breed: 'Labrador' };
+localStorage.setItem(key, JSON.stringify(myObj));
+
+// Read item:
+let item = JSON.parse(localStorage.getItem(key));
+
+
+
+
+checking items:
+
+
+
+if (localStorage.length > 0) {
+  // We have items
+} else {
+  // No items
+}
+
+
+checking for support:
+
+
+if (window.localStorage) {
+  // localStorage supported
+}
+
+
+iterating over items:
+
+
+for (let i = 0; i < localStorage.length; i++){
+  let key = localStorage.key(i);
+  let value = localStorage.getItem(key);
+  console.log(key, value);
+}
+
